@@ -9,26 +9,30 @@ import Header from './components/Header/Header';
 import Main from './components/Main';
 import { StyledApp } from './index.styled';
 import { StylesProvider } from '@material-ui/core/styles';
+import { Provider } from 'react-redux';
+import store from './store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <StylesProvider injectFirst>
-      <StyledApp>
-        <Router>
-          <Header />
-          <Main>
-            <Switch>
-              <Route path='/register'>
-                <Register />
-              </Route>
-              <Route path='/'>
-                <Home />
-              </Route>
-            </Switch>
-          </Main>
-        </Router>
-      </StyledApp>
-    </StylesProvider>
+    <Provider store={store}>
+      <StylesProvider injectFirst>
+        <StyledApp>
+          <Router>
+            <Header />
+            <Main>
+              <Switch>
+                <Route path='/register'>
+                  <Register />
+                </Route>
+                <Route path='/'>
+                  <Home />
+                </Route>
+              </Switch>
+            </Main>
+          </Router>
+        </StyledApp>
+      </StylesProvider>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

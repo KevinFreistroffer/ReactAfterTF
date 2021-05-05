@@ -7,24 +7,20 @@ export const StyledHeader = styled.header`
   align-items: center;
   padding: 1rem;
   background-color: white;
+  border-bottom: 2px solid #333;
 
   @media only screen and (min-width: 576px) {
-    background-color: #eeeeee;
   }
 
   @media only screen and (min-width: 768px) {
-    background-color: #dddddd;
   }
 
   @media only screen and (min-width: 992px) {
-    background-color: #cccccc;
   }
 
   @media only screen and (min-width: 1200px) {
-    background-color: #bbbbbb;
   }
 
   @media only screen and (min-width: 1440px) {
-    background-color: #aaaaaa;
   }
 `;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyledHeader } from './Header.styled';
-import Title from './Title/Title';
-import MenuToggler from './MenuToggler';
+import Title from './components/Title/Title';
+import MenuToggler from './components/MenuToggler';
 import Navigation from './components/Navigation';
 import { StyledNavigationLink } from './components/Navigation/Navigation.styled';
 

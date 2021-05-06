@@ -9,7 +9,7 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const StyledNavigationLink = styled(Link)`
+export const NavigationLink = styled(Link)`
   display: block;
   width: 100%;
   padding: 0.5rem 0.5rem 0.5rem 1.5rem;

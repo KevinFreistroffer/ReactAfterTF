@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Icon from '@material-ui/core/Icon';
 
-import {
-  StyledMenuToggler,
-  StyledDrawer,
-  StyledUL,
-  StyledLI,
-} from './MenuToggler.styled';
-import { StyledNavigationLink } from '../Navigation/Navigation.styled';
+import { Container, Drawer, UL, LI } from './MenuToggler.styled';
+import { NavigationLink } from '../Navigation/Navigation.styled';
+import { URL } from 'node:url';
 
 export interface IMenuTogglerProps {}
 
@@ -38,19 +34,19 @@ export const MenuToggler = (props: IMenuTogglerProps): JSX.Element => {
   };
 
   return (
-    <StyledMenuToggler onClick={toggleDrawer}>
+    <Container onClick={toggleDrawer}>
       <Icon>menu</Icon>
-      <StyledDrawer anchor='right' open={open}>
-        <StyledUL>
-          <StyledLI>
-            <StyledNavigationLink to='/'>Home</StyledNavigationLink>
-          </StyledLI>
-          <StyledLI>
-            <StyledNavigationLink to='/register'>Register</StyledNavigationLink>
-          </StyledLI>
-        </StyledUL>
-      </StyledDrawer>
-    </StyledMenuToggler>
+      <Drawer anchor='right' open={open}>
+        <UL>
+          <LI>
+            <NavigationLink to='/'>Home</NavigationLink>
+          </LI>
+          <LI>
+            <NavigationLink to='/register'>Register</NavigationLink>
+          </LI>
+        </UL>
+      </Drawer>
+    </Container>
   );
 };
 

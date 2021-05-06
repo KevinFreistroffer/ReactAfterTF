@@ -3,7 +3,7 @@ import { StyledHeader } from './Header.styled';
 import Title from './components/Title';
 import MenuToggler from './components/MenuToggler';
 import Navigation from './components/Navigation';
-import { StyledNavigationLink } from './components/Navigation/Navigation.styled';
+import { NavigationLink } from './components/Navigation/Navigation.styled';
 
 export interface DefaultRootState {
   key: string;
@@ -19,8 +19,8 @@ const Header = (props: IHeaderProps) => {
       <MenuToggler />
       {/* 768px+ navigation menu */}
       <Navigation>
-        <StyledNavigationLink to='/'>Home</StyledNavigationLink>
-        <StyledNavigationLink to='/register'>Register</StyledNavigationLink>
+        <NavigationLink to='/'>Home</NavigationLink>
+        <NavigationLink to='/register'>Register</NavigationLink>
       </Navigation>
     </StyledHeader>
   );

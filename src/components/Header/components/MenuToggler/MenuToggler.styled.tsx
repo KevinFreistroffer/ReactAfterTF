@@ -3,9 +3,10 @@ import { Drawer as MatDrawer, Button } from '@material-ui/core';
 
 export const Container = styled(Button)`
   display: flex;
+  width: auto;
 
   @media only screen and (min-width: 768px) {
-    display: none;s
+    display: none;
   }
 `;
 

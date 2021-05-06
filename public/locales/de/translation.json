@@ -1,0 +1,17 @@
+{
+  "welcome": "Herzlich willkommen",
+  "Create an Account": "Ein Konto erstellen",
+  "Create Account": "Benutzerkonto erstellen",
+  "Log in": "Einloggen",
+  "page_title": {
+    "Home": "Zuhause",
+    "Register": "Registrieren",
+    "Sign In": "Einloggen"
+  },
+  "form_placeholders": {
+    "Enter a username": "Gebe einen Benutzernamen ein",
+    "email@example.com": "email@example.com",
+    "Enter a password": "Geben Sie ein Passwort ein",
+    "Confirm your password": "Bestätigen Sie Ihr Passwort"
+  }
+}

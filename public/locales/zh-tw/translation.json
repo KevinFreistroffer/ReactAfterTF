@@ -1,0 +1,17 @@
+{
+  "welcome": "歡迎",
+  "Create an Account": "創建一個帳戶",
+  "Create Account": "創建帳號",
+  "Log in": "登錄",
+  "page_title": {
+    "Home": "家",
+    "Register": "登記",
+    "Sign In": "登入"
+  },  
+  "form_placeholders": {
+    "Enter a username": "輸入用戶名",
+    "email@example.com": "Email@example.Com",
+    "Enter a password": "輸入密碼",
+    "Confirm your password": "確認你的密碼"
+  }
+}

@@ -6,10 +6,9 @@ export const Container = styled.div`
 
   h1 {
     text-align: center;
-    margin-bottom: 4rem;
 
-    @media only screen and (min-width: 768px) {
-      text-align: left;
+    span {
+      font-size: 1rem;
     }
   }
 `;

@@ -1,0 +1,17 @@
+{
+  "welcome": "欢迎",
+  "Create an Account": "创建一个帐户",
+  "Create Account": "创建帐号",
+  "Log in": "登录",
+  "page_title": {
+    "Home": "家",
+    "Register": "登记",
+    "Sign In": "登入"
+  },
+  "form_placeholders": {
+    "Enter a username": "输入用户名",
+    "email@example.com": "Email@example.Com",
+    "Enter a password": "输入密码",
+    "Confirm your password": "确认你的密码"
+  }
+}

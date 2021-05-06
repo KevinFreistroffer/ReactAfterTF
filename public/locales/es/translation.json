@@ -1,0 +1,17 @@
+{
+  "welcome": "Bienvenidos",
+  "Create an Account": "Crea una cuenta",
+  "Create Account": "Crear una cuenta",
+  "Log in": "Iniciar sesión",
+  "page_title": {
+    "Home": "Casa",
+    "Register": "Registrarse",
+    "Sign In": "Registrarse"
+  },
+  "form_placeholders": {
+    "Enter a username": "Introduzca un nombre de usuario",
+    "email@example.com": "email@example.com",
+    "Enter a password": "Ingrese una contraseña",
+    "Confirm your password": "Confirmar la contraseña"
+  }
+}

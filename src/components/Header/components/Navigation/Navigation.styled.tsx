@@ -10,8 +10,6 @@ export const StyledNavigation = styled.nav`
 `;
 
 export const NavigationLink = styled(Link)`
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.5rem 0.5rem 1.5rem;
-  margin: 1rem auto;
+  display: inline-block;
+  width: auto;
 `;

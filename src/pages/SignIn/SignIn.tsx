@@ -100,8 +100,11 @@ export const SignIn = (props: ISignInProps) => {
         <form>
           {TextInputs}
           <button type='submit' onClick={submit}>
-            {t('page_title.Sign In', 'Sign In')}
+            {t('Log in', 'Log in')}
           </button>
+          <NavigationLink to='forgot-password'>
+            {t('Forgot password', 'Forgot password')}?
+          </NavigationLink>
         </form>
       </FormContainer>
     </Container>

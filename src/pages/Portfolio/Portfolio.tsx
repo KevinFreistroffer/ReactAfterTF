@@ -35,28 +35,58 @@ export const Portfolio = (props: IPortfolioProps) => {
       screenshots: [
         {
           src: OrderHistory,
-          alt: 'Order History - 1440px',
-          caption: 'Order History - 1440px',
+          alt: t(
+            'page_content.portfolio.project1.screenshot1.alt',
+            'Order History - 1440px'
+          ),
+          caption: t(
+            'page_content.portfolio.project1.screenshot1.alt',
+            'Order History - 1440px'
+          ),
         },
         {
           src: OrderDetails,
-          alt: 'Order Details - 1440px',
-          caption: 'Order Details - 1440px',
+          alt: t(
+            'page_content.portfolio.project1.screenshot2.alt',
+            'Order Details - 1440px'
+          ),
+          caption: t(
+            'page_content.portfolio.project1.screenshot2.alt',
+            'Order Details - 1440px'
+          ),
         },
         {
           src: OrderDetails768,
-          alt: 'Order Details - 768px',
-          caption: 'Order Details - 768px',
+          alt: t(
+            'page_content.portfolio.project1.screenshot3.alt',
+            'Order Details - 768px'
+          ),
+          caption: t(
+            'page_content.portfolio.project1.screenshot3.alt',
+            'Order Details - 768px'
+          ),
         },
         {
           src: OrderDetails576,
-          alt: 'Order Details - 576px',
-          caption: 'Order Details - 576px',
+          alt: t(
+            'page_content.portfolio.project1.screenshot4.alt',
+            'Order Details - 576px'
+          ),
+          caption: t(
+            'page_content.portfolio.project1.screenshot4.alt',
+            'Order Details - 576px'
+          ),
         },
         {
           src: OrderDetails320,
-          alt: 'Order Details - 320px',
-          caption: 'Order Details - 320px',
+          alt: t(
+            'page_content.portfolio.project1.screenshot5.alt',
+            'Order Details - 320px'
+          ),
+          caption: t(
+            'page_content.portfolio.project1.screenshot5.alt',
+            'Order Details - 320px'
+          ),
         },
       ],
     },
@@ -65,14 +95,22 @@ export const Portfolio = (props: IPortfolioProps) => {
       id: 2,
       projectName: 'React Gradient',
       technologies: ['HTML5', 'CSS3', 'JavaScript', 'React'],
-      description:
-        'Based on the grid coordinates, the background color is dynamically set. Created while waiting in an aiport!',
+      description: t(
+        'page_content.portfolio.project2.description',
+        'Based on the grid coordinates, the background color is dynamically set. Created while waiting in an aiport!'
+      ),
       URL: 'https://react-gradient-grid.herokuapp.com/',
       screenshots: [
         {
           src: ReactGradients,
-          alt: 'React Dynamic Gradient Background Color',
-          caption: 'React Dynamic Gradient Background Color',
+          alt: t(
+            'page_content.portfolio.project2.screenshot1.alt',
+            'React Dynamic Gradient Background Color'
+          ),
+          caption: t(
+            'page_content.portfolio.project2.screenshot1.alt',
+            'React Dynamic Gradient Background Color'
+          ),
         },
       ],
     },

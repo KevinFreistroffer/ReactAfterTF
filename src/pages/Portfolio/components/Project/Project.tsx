@@ -6,8 +6,10 @@ import { IProject } from '../../../../interfaces/Project';
 import SimpleReactLightbox from 'simple-react-lightbox';
 import { returnCommaSeparatedStrings } from '../../../../utility';
 import { ImageCaption, Caption, ImgContainer } from './Project.styled';
+import { useTranslation } from 'react-i18next';
 
 export const Project = (props: IProject) => {
+  const { t } = useTranslation();
   return (
     <StyledCard>
       <CardContent>
@@ -46,7 +48,7 @@ export const Project = (props: IProject) => {
       {props.URL && (
         <CardActions>
           <a href={props.URL} target='_blank' rel='noreferrer'>
-            Visit website
+            {t('Visit website', 'Visit website')}
           </a>
         </CardActions>
       )}

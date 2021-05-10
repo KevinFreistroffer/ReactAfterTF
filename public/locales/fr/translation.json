@@ -16,6 +16,7 @@
   "Front End Developer": "Développeur frontal",
   "Angular & Angular-Dart Developer": "Développeur Angular & Angular-Dart",
   "Angular Engineer": "Ingénieur angulaire",
+  "Visit website": "Visitez le site Web",
   "about_me_text": "Bonjour, je m'appelle Kevin Freistroffer. J'ai 36 ans et je développe depuis plus de 10 ans. Je me spécialise en HTML5, CSS3, JavaScript avec React et Angular en front-end, NodeJS et MongoDB côté serveur, Dart et développement mobile avec Flutter. J'aime, je préfère et j'ai besoin de travailler avec une équipe d'autres développeurs pour progresser et j'ai hâte de rejoindre une équipe, dans une méthodologie Agile, en utilisant des outils tels que Jira, pour développer des histoires et des fonctionnalités, et pour corriger les bugs, tout en apprenant des technologies, des stratégies, des processus de réflexion à développer et à intégrer dans mes routines quotidiennes, à être piloté par l'équipe et à diriger en cas de besoin",
   "work_history": {
     "summary": {
@@ -47,6 +48,7 @@
   "page_title": {
     "Home": "Domicile",
     "Portfolio": "Portefeuille",
+    "Contact me": "Contactez moi",
     "Register": "S'inscrire",
     "Sign In": "S'identifier"
   },
@@ -57,8 +59,34 @@
     "portfolio": {
       "project1": {
         "description": "Contributions aux fonctionnalités, tâches et corrections de bogues sur 3 pages, y compris la conception réactive de 320 pixels à 1440 pixels à l'aide de CDN CSS personnalisés, de composants réutilisables que nous avons développés et de composants réutilisables existants à partir de référentiels existants.",
-        "technologies": "HTML5, CSS3 et SCSS, JavaScript, Reagieren, gestaltete Komponenten, NodeJS, SCRUM, JIRA"
+        "technologies": "HTML5, CSS3 et SCSS, JavaScript, Reagieren, gestaltete Komponenten, NodeJS, SCRUM, JIRA",
+        "screenshot1": {
+          "alt": "Historique des commandes - 1440px"
+        },
+        "screenshot2": {
+          "alt": "Détails de la commande - 1440pxx"
+        },
+        "screenshot3": {
+          "alt": "Détails de la commande - 768px"
+        },
+        "screenshot4": {
+          "alt": "Détails de la commande - 576px"
+        },
+        "screenshot5": {
+          "alt": "Détails de la commande - 320px"
+        }
+      },
+      "project2": {
+        "description": "En fonction des coordonnées de la grille, la couleur d'arrière-plan est définie de manière dynamique. Créé en attendant dans un aéroport!",
+        "technologies": "HTML5, CSS3 & SCSS, JavaScript, Reagieren, gestaltete Komponenten, NodeJS, SCRUM, JIRA",
+        "screenshot1": {
+          "alt": "Couleur d'arrière-plan du dégradé dynamique React"
+        }
       }
+    },
+    "contact_me": {
+      "Email": "E-mail",
+      "LinkedIn": "LinkedIn"
     }
   },
   "form_placeholders": {

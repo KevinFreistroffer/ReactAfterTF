@@ -16,6 +16,7 @@
   "Front End Developer": "Entwickler für Benutzeroberflächen",
   "Angular & Angular-Dart Developer": "Angular & Angular-Dart Entwickler",
   "Angular Engineer": "Winkelingenieur",
+  "Visit website": "Besuche die Website",
   "about_me_text": "Hallo, ich heiße Kevin Freistroffer. Ich bin 36 Jahre alt und entwickle mich seit über 10 Jahren. Ich bin spezialisiert auf HTML5, CSS3, JavaScript mit React und Angular im Frontend, NodeJS und MongoDB auf der Serverseite, Dart und Mobile Development mit Flutter. Ich genieße, bevorzuge und muss mit einem Team anderer Entwickler zusammenarbeiten, um Fortschritte zu erzielen, und freue mich darauf, einem Team in einer agilen Methodik beizutreten, Tools wie Jira zu verwenden, Geschichten und Funktionen zu entwickeln und Fehler zu beheben, während ich Neues lerne Technologien, Strategien, Denkprozesse, die sich entwickeln und in meine täglichen Routinen integrieren lassen, vom Team geleitet werden und bei Bedarf führen", 
   "work_history": {
     "summary": {
@@ -47,6 +48,7 @@
   "page_title": {
     "Home": "Zuhause",
     "Portfolio": "Portfolio",
+    "Contact me": "Kontaktiere mich",
     "Register": "Registrieren",
     "Sign In": "Einloggen"
   },
@@ -57,8 +59,34 @@
     "portfolio": {
       "project1": {
         "description": "Beigetragene Funktionen, Aufgaben und Fehlerbehebungen auf 3 Seiten, einschließlich Responsive Design von 320px bis 1440px Ansichtsfenstern mit benutzerdefinierten CSS-CDNs, von uns entwickelten wiederverwendbaren Komponenten und vorhandenen wiederverwendbaren Komponenten aus vorhandenen Repositorys.",
-        "technologies": "HTML5, CSS3 & SCSS, JavaScript, Reagieren, Gestaltungskomponenten, NodeJS, SCRUM, JIRA"
+        "technologies": "HTML5, CSS3 & SCSS, JavaScript, Reagieren, Gestaltungskomponenten, NodeJS, SCRUM, JIRA",
+        "screenshot1": {
+          "alt": "Bestellhistorie - 1440px"
+        },
+        "screenshot2": {
+          "alt": "Bestelldetails - 1440px"
+        },
+        "screenshot3": {
+          "alt": "Bestelldetails - 768px"
+        },
+        "screenshot4": {
+          "alt": "Bestelldetails - 576px"
+        },
+        "screenshot5": {
+          "alt": "Bestelldetails - 320px"
+        }
+      },
+      "project2": {
+        "description": "Basierend auf den Gitterkoordinaten wird die Hintergrundfarbe dynamisch festgelegt. Erstellt während des Wartens in einem Flughafen!",
+        "technologies": "HTML5, CSS3 & SCSS, JavaScript, Reagieren, gestaltete Komponenten, NodeJS, SCRUM, JIRA",
+        "screenshot1": {
+          "alt": "Reagieren Sie auf die Hintergrundfarbe mit dynamischem Farbverlauf"
+        }
       }
+    },
+    "contact_me": {
+      "Email": "Email",
+      "LinkedIn": "LinkedIn"
     }
   },
   "form_placeholders": {

@@ -44,8 +44,6 @@ export const Project = (props: IProject) => {
                     return (
                       <ImageCaption className='image-caption'>
                         <ImgContainer>
-                          <div className='overlay'></div>
-
                           <img src={`${src}`} alt={alt} />
                         </ImgContainer>
                         <Caption className='caption mt-l2'>{caption}</Caption>
@@ -57,7 +55,13 @@ export const Project = (props: IProject) => {
           </SimpleReactLightbox>
         </div>
       </CardContent>
-      {props.URL && <CardActions>Visit website</CardActions>}
+      {props.URL && (
+        <CardActions>
+          <a href={props.URL} target='_blank' rel='noreferrer'>
+            Visit website
+          </a>
+        </CardActions>
+      )}
     </StyledCard>
   );
 };

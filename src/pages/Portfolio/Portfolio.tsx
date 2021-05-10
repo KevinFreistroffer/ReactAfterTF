@@ -7,6 +7,7 @@ import OrderDetails from '../../imgs/order_details.jpg';
 import OrderDetails768 from '../../imgs/order_details_768.jpg';
 import OrderDetails576 from '../../imgs/order_details_576.png';
 import OrderDetails320 from '../../imgs/order_details_320.png';
+import ReactGradients from '../../imgs/react-gradients.png';
 
 import Project from './components/Project';
 import { IProject } from '../../interfaces/Project';
@@ -56,6 +57,22 @@ export const Portfolio = (props: IPortfolioProps) => {
           src: OrderDetails320,
           alt: 'Order Details - 320px',
           caption: 'Order Details - 320px',
+        },
+      ],
+    },
+
+    {
+      id: 2,
+      projectName: 'React Gradient',
+      technologies: ['HTML5', 'CSS3', 'JavaScript', 'React'],
+      description:
+        'Based on the grid coordinates, the background color is dynamically set. Created while waiting in an aiport!',
+      URL: 'https://react-gradient-grid.herokuapp.com/',
+      screenshots: [
+        {
+          src: ReactGradients,
+          alt: 'React Dynamic Gradient Background Color',
+          caption: 'React Dynamic Gradient Background Color',
         },
       ],
     },

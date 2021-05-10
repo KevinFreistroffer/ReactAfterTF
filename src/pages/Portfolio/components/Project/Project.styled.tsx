@@ -6,7 +6,7 @@ export const StyledCard = styled(Card)`
   transition: all 0.1s linear;
 
   li {
-    line-height: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .project-name {
@@ -70,14 +70,4 @@ export const ImgContainer = styled.div`
   position: relative;
   max-height: 320px;
   overflow: hidden;
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
-    box-shadow: inset 0px -3rem 1rem rgba(255, 255, 255, 0.75);
-  }
 `;

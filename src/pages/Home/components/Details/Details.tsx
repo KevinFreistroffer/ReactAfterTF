@@ -23,13 +23,19 @@ export const Details = (props: IDetailsProps) => {
       className='flex-column center-all'
     >
       <UL>
-        {props.contractor && (
-          <LI className='contractor'>
-            <strong>{t('Contractor', 'Contractor')}:</strong>
-            &nbsp;
-            <span>{props.contractor}</span>
-          </LI>
-        )}
+        <li className='contractor-and-employment-period'>
+          {props.contractor && (
+            <LI className='contractor flex justify-content-space-between'>
+              <div>
+                <strong>{t('Contractor', 'Contractor')}:</strong>
+                &nbsp;
+                <span>{props.contractor}</span>
+              </div>
+              <strong>{props.employmentPeriod}</strong>
+            </LI>
+          )}
+        </li>
+
         <LI className='client'>
           <strong>{t('Client', 'Client')}</strong>:&nbsp;
           <span>{props.client}</span>
@@ -38,11 +44,6 @@ export const Details = (props: IDetailsProps) => {
           <strong>{t('Location', 'Location')}</strong>: &nbsp;
           <span>{props.location}</span>
         </LI>
-        <LI className='employment-period'>
-          <strong>{t('Employment period', 'Employment period')}</strong>: &nbsp;
-          <span>{props.employmentPeriod}</span>
-        </LI>
-
         <LI>
           <strong>{t('Position', 'Position')}</strong>:&nbsp;
           <span>{props.position}</span>

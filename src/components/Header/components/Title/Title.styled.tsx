@@ -8,6 +8,7 @@ export const StyledTitle = styled.h1`
   font-weight: bold;
 
   @media only screen and (min-width: 768px) {
+    margin-bottom: 2rem;
     font-size: 2rem;
     line-height: 2rem;
   }

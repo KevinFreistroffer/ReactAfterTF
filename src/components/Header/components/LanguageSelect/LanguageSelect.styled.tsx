@@ -6,7 +6,11 @@ export const Container = styled.div`
   justify-content: flex-start;
 
   @media only screen and (min-width: 768px) {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     justify-content: flex-end;
+
     .MuiFormControl-root {
       margin-right: 1rem;
       margin-bottom: 1rem;

@@ -20,18 +20,6 @@ export const Project = (props: IProject) => {
           <li className='description'>
             <strong>About:</strong> {props.description}
           </li>
-          {/* <li className='urls'>
-            <strong>Links:</strong>
-            <ul className='full-width'>
-              {props.URLs.map((url) => (
-                <li>
-                  <a href={url} target='_blank' rel='noreferrer'>
-                    {url}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </li> */}
         </ul>
         <div className='screenshots full-width justify-flex-start'>
           <strong className='mb-l1'>Screenshots:</strong>

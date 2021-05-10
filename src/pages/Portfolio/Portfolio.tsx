@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
-import PageHeader from '../../components/PageHeader';
-import { Container, Img, Paragraph, ParagraphAndImg } from './Portfolio.styled';
+import { Container } from './Portfolio.styled';
 import OrderHistory from '../../imgs/order_history.jpg';
 import OrderDetails from '../../imgs/order_details.jpg';
 import OrderDetails768 from '../../imgs/order_details_768.jpg';
@@ -94,9 +93,9 @@ export const Portfolio = (props: IPortfolioProps) => {
   ];
   return (
     <Container>
-      <PageHeader>
+      {/* <PageHeader>
         <h1 className='mb-l3'>{t('page_title.Portfolio', 'Portfolio')}</h1>
-      </PageHeader>
+      </PageHeader> */}
       <main>
         {data.map((project: IProject) => (
           <Project {...project}></Project>

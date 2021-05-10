@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   @media only screen and (min-width: 768px) {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     right: 1rem;
     justify-content: flex-end;
 

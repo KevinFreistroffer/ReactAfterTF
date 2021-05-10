@@ -81,7 +81,7 @@ export const Home = (props: IHomeProps) => {
           'Develop at a Google building and remotely.'
         ) + '.',
       ],
-      borderColor: '#ffa500',
+      borderColor: '#f4e6a9',
     },
     {
       contractor: 'Quest Global',
@@ -114,9 +114,6 @@ export const Home = (props: IHomeProps) => {
 
   return (
     <Container className='flex-column center-all'>
-      <PageHeader>
-        {/* <h1 className='mb-l3'>{t('About me', 'About me')}</h1> */}
-      </PageHeader>
       <ParagraphAndImg className='justify-space-around align-items-center'>
         <Img className='col-xs-12 col-sm-6' src={me} alt='Kevin Freistroffer' />
         <Paragraph className='col-xs-12 col-sm-6'>

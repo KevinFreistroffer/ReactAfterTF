@@ -45,6 +45,9 @@ export const MenuToggler = (props: IMenuTogglerProps): JSX.Element => {
           </LI>
           <LI>
             <NavigationLink to='/portfolio'>Portfolio</NavigationLink>
+          </LI>{' '}
+          <LI>
+            <NavigationLink to='/contact-me'>Contact me</NavigationLink>
           </LI>
         </UL>
       </Drawer>

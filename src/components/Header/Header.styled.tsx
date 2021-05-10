@@ -7,6 +7,7 @@ export const StyledHeader = styled.header.attrs({
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
   padding: 2rem 1rem;
   background-color: white;
 

@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/reset.css';
 import '../../styles/default.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { Home, Portfolio, SignIn, SignUp } from '../../pages';
+import { Home, Portfolio, SignIn, SignUp, ContactMe } from '../../pages';
 import Header from '../Header/Header';
 import Main from '../Main';
 import Footer from '../Footer';
@@ -29,6 +29,9 @@ export default function App(props: IAppProps) {
               <Switch>
                 <Route path='/portfolio'>
                   <Portfolio />
+                </Route>{' '}
+                <Route path='/contact-me'>
+                  <ContactMe />
                 </Route>
                 <Route path='/sign-in'>
                   <SignIn />

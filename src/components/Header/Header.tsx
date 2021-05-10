@@ -25,11 +25,11 @@ const Header = (props: IHeaderProps) => {
       <div className='flex align-items-center'>
         <MenuToggler />
 
-        <Navigation className='mr-l1'>
+        <Navigation>
           <NavigationLink exact to='/' className='mr-l3'>
             {t('page_title.Home', 'Home')}
           </NavigationLink>{' '}
-          <NavigationLink to='/portfolio'>
+          <NavigationLink to='/portfolio' className='mr-l3'>
             {t('page_title.Portfolio', 'Portfolio')}
           </NavigationLink>
           <NavigationLink to='/contact-me'>

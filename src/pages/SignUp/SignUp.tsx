@@ -9,7 +9,7 @@ import { NavigationLink } from '../../components/Header/components/Navigation/Na
 //   Label,
 //   Input,
 // } from '/FormControl.styled';
-import { FormControl } from '../../models';
+import { FormControl } from '../../interfaces';
 import { useTranslation } from 'react-i18next';
 
 export interface ISignUpProps {}

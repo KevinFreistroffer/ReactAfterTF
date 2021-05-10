@@ -6,10 +6,11 @@ import {
   Input,
   ErrorMessage,
 } from './ValidatedTextInput.styled';
-import { FormControl } from '../../models';
+import { FormControl } from '../../interfaces';
 
 export interface IValidatedTextInput extends FormControl {
-  onChange: (event: React.ChangeEvent) => void;
+  onChange?: (event: React.ChangeEvent) => void;
+  onBlur?: (event: React.ChangeEvent) => void;
 }
 
 export default function ValidatedTextInput({
@@ -19,6 +20,7 @@ export default function ValidatedTextInput({
   value,
   error,
   onChange,
+  onBlur,
 }: IValidatedTextInput) {
   return (
     <Container>
@@ -33,6 +35,7 @@ export default function ValidatedTextInput({
             className=''
             error={error}
             onChange={onChange}
+            onBlur={onBlur}
           />
         </Label>
         {error && (

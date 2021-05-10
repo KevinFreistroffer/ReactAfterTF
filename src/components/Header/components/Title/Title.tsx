@@ -1,16 +1,10 @@
 import * as React from 'react';
-import styled from 'styled-components';
+import { StyledTitle } from './Title.styled';
 
-export interface IMenuTogglerProps {}
+export interface ITitleProps {}
 
-const StyledDeleteThis = styled.div`
-  width: 11rem;
-  height: 4rem;
-  background-color: red;
-`;
-
-export const Navigation = (props: IMenuTogglerProps): JSX.Element => {
-  return <StyledDeleteThis />;
+export const Title = (props: ITitleProps): JSX.Element => {
+  return <StyledTitle>Kevin Freistroffer</StyledTitle>;
 };
 
-export default Navigation;
+export default Title;

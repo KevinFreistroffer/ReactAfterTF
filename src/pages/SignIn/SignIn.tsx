@@ -2,13 +2,7 @@ import * as React from 'react';
 import { Container, FormContainer, Title } from './SignIn.styled';
 import PageHeader from '../../components/PageHeader';
 import ValidatedTextInput from '../../components/ValidatedTextInput';
-// import {
-//   FormControl as StyledFormControl,
-//   ErrorMessage,
-//   Label,
-//   Input,
-// } from '/FormControl.styled';
-import { FormControl } from '../../models';
+import { FormControl } from '../../interfaces';
 import { useTranslation } from 'react-i18next';
 import { NavigationLink } from '../../components/Header/components/Navigation/Navigation.styled';
 
@@ -60,6 +54,7 @@ export const SignIn = (props: ISignInProps) => {
       },
     ]
   );
+  const [formIsSubmitted, setFormIsSubmitted] = React.useState<boolean>();
 
   const handleOnChange = (event: any, index: number) => {
     event.persist();
@@ -69,18 +64,79 @@ export const SignIn = (props: ISignInProps) => {
     updateFormControls([...newState]);
   };
 
+  const handleOnBlur = (event: any, index: number) => {
+    console.log('handleOnBlur', event.target.value);
+    const inputId = event.target.id;
+    validate(inputId, event.target.value);
+  };
+
+  const validate = (inputId: string, value: string) => {
+    let newState = formControls;
+    let index = formControls.findIndex((f) => f.id === inputId);
+    switch (inputId) {
+      case 'username':
+        console.log('case username', value.trim() !== '');
+        if (value.trim() !== '') {
+          newState[index].error = undefined;
+        } else {
+          newState[index].error = 'Username is required';
+        }
+
+        break;
+      case 'email':
+        if (
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+            value
+          )
+        ) {
+          newState[index].error = undefined;
+        } else {
+          newState[index].error = 'Enter a valid email address';
+        }
+        break;
+      case 'password':
+        if (value.trim() !== '') {
+          newState[index].error = undefined;
+        } else {
+          newState[index].error = 'Password is required';
+        }
+        break;
+      case 'passwordConfirmation':
+        const password = formControls.find((f) => f.id === 'password');
+
+        if (password?.value === value) {
+          newState[index].error = undefined;
+        } else if (password?.value !== newState[index].value) {
+          newState[index].error = 'Passwords must match';
+        }
+        break;
+      default:
+        break;
+    }
+
+    console.log('newState before calling updateFormControls', newState);
+    updateFormControls([...newState]);
+  };
+
   const TextInputs = formControls.map((control: FormControl, index: number) => {
     return (
       <ValidatedTextInput
         {...control}
         onChange={(event: any) => handleOnChange(event, index)}
+        onBlur={(event: any) => handleOnBlur(event, index)}
       />
     );
   });
 
+  React.useEffect(() => {
+    console.log('React useEffect formControls changed');
+    console.log(formControls);
+  }, [formControls]);
+
   const submit = (event: any) => {
     event.preventDefault();
     console.log('Form submitted');
+    setFormIsSubmitted(true);
   };
 
   return (

@@ -1,11 +1,11 @@
-import { User } from '../../models';
+import { User } from '../../interfaces';
 
 export interface UsersState {
   users: Array<User>;
   user: User | undefined;
 }
 
-export const defaultState = {
+export const defaultState: UsersState = {
   users: [],
   user: undefined,
 };

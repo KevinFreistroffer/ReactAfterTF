@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Icon from '@material-ui/core/Icon';
-
-import { Container, Drawer, UL, LI } from './MenuToggler.styled';
+import { Container, Icon, Drawer, UL, LI, Label } from './MenuToggler.styled';
 import { NavigationLink } from '../Navigation/Navigation.styled';
-import { URL } from 'node:url';
+import LanguageSelect from '../LanguageSelect';
 
 export interface IMenuTogglerProps {}
 
@@ -37,12 +35,16 @@ export const MenuToggler = (props: IMenuTogglerProps): JSX.Element => {
     <Container onClick={toggleDrawer}>
       <Icon>menu</Icon>
       <Drawer anchor='right' open={open}>
+        <Label htmlFor='language-select'>Change language</Label>
+        <LanguageSelect className='mb-l1' />
         <UL>
           <LI>
-            <NavigationLink to='/'>Home</NavigationLink>
+            <NavigationLink exact to='/'>
+              Home
+            </NavigationLink>
           </LI>
           <LI>
-            <NavigationLink to='/register'>Register</NavigationLink>
+            <NavigationLink to='/portfolio'>Portfolio</NavigationLink>
           </LI>
         </UL>
       </Drawer>

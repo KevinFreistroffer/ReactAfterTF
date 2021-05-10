@@ -1,18 +1,25 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
+import { Container as StyledLanguageSelect } from './components/LanguageSelect/LanguageSelect.styled';
 
 export const StyledHeader = styled.header`
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   background-color: white;
-  border-bottom: 2px solid #333;
+
+  .MuiFormControl-root,
+  ${StyledLanguageSelect} {
+    display: none;
+  }
 
   @media only screen and (min-width: 576px) {
   }
 
   @media only screen and (min-width: 768px) {
+    .MuiFormControl-root,
+    ${StyledLanguageSelect} {
+      display: inherit;
+    }
   }
 
   @media only screen and (min-width: 992px) {

@@ -1,0 +1,19 @@
+[
+  {
+    "contractor": "Insight Global",
+    "client": "Thermofisher", 
+    "location": "Carlsbad, CA", 
+    "employmentPeriod": "September 2020 - April 30th, 2021", 
+    "position": "Front End Developer", 
+    "summary": [
+      "Front end developer tasked with converting Angular pages to React given the designs and UX.",
+      "Scrum methodology including sprint planning, backlog grooming, and end of sprint retrospective meetings.",
+      "Daily stand up meetings lead by a scrum master, a product owner, team lead, with other front-end developers, backend developers and other team members from within the company.",
+      "End of sprint demos to team members from the business.",
+      "Integral part of the development and release lifecycle including estimating requirements, implementing requirements, deploying to QA, and verifying the code we pushed to QA and production following a release.",
+      "Strong team-oriented development process including code reviews, chat, phone and video calls, after hour meetings to discuss current and future requirements, and after hours collaboration to fix bugs following a release.",
+      "Technologies including: Jira, Confluence, Abstract, HTML5, CSS & SCSS, JavaScript with React, styled-components, NodeJS, development tools including Jenkins and GitHub.",
+      "Requirements developed and pushed to production at thermofisher.com."
+    ]
+  }
+]

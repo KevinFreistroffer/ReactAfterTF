@@ -1,8 +1,17 @@
 import { createStore, combineReducers, applyMiddleware } from 'redux';
-import { usersReducer } from './reducers/users';
+import { LoadingState, loadingReducer } from './reducers/loading';
+import { UsersState, usersReducer } from './reducers/users';
 import thunk from 'redux-thunk';
 
-const reducers = combineReducers([usersReducer]);
+export interface DefaultRootState {
+  users: UsersState;
+  loading: LoadingState;
+}
+
+const reducers = combineReducers<DefaultRootState>({
+  users: usersReducer,
+  loading: loadingReducer,
+});
 
 const store = createStore(reducers, applyMiddleware(thunk));
 

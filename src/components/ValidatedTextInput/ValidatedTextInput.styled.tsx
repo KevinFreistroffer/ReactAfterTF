@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const Container = styled.div`
   display: block;
@@ -23,7 +23,7 @@ export const Label = styled.label``;
 
 export const Input = styled.input`
   padding: 0.5rem;
-  ${(props: { error: JSX.Element | undefined }) => {
+  ${(props: { error: string | JSX.Element | undefined }) => {
     if (props.error) {
       return { 'border-bottom': '2px solid red' };
     }

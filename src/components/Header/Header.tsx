@@ -5,7 +5,8 @@ import MenuToggler from './components/MenuToggler';
 import Navigation from './components/Navigation';
 import { NavigationLink } from './components/Navigation/Navigation.styled';
 import { useTranslation } from 'react-i18next';
-import Cookie from 'js-cookie';
+import LanguageSelect from '../Header/components/LanguageSelect';
+//import InputLabel from '@material-ui/core/InputLabel';
 
 export interface DefaultRootState {
   key: string;
@@ -14,55 +15,32 @@ export interface DefaultRootState {
 export interface IHeaderProps {}
 
 const Header = (props: IHeaderProps) => {
-  const [selectedLanguage, setSelectedLanguage] = React.useState<string>('en');
-
-  React.useEffect(() => {
-    const langCode = Cookie.get('LANG_CODE');
-    if (langCode) {
-      setSelectedLanguage(langCode);
-    }
-  }, []);
-
-  const handleOnChange = (event: any) => {
-    console.log(event.target.value);
-    Cookie.set('LANG_CODE', event.target.value);
-    setSelectedLanguage(event.target.value);
-    window.location.reload();
-  };
-
   const { t } = useTranslation();
   return (
-    <StyledHeader>
-      <div className='full-width flex-row justify-content-space-between align-items-center'>
+    <StyledHeader className='full-width flex-column justify-content-space-between align-items-center'>
+      <LanguageSelect />
+
+      <div className='flex justify-content-space-between full-width'>
         <Title />
         {/* 320 - 767px menu toggler */}
-        <MenuToggler />
+
         {/* 768px+ navigation menu */}
-        <Navigation>
-          <NavigationLink to='/' className='mr-l1'>
-            {t('page_title.Home', 'Home')}
-          </NavigationLink>
-          <NavigationLink to='/sign-in'>
-            {t('page_title.Sign In', 'Sign In')}
-          </NavigationLink>
-        </Navigation>
-      </div>
-      <div className='full-width flex-row justify-content-flex-end'>
-        <select
-          name='select-language'
-          id='language-select'
-          onChange={handleOnChange}
-          value={selectedLanguage}
-          defaultValue='en'
-          onSelect={handleOnChange}
-        >
-          <option value='en'>English</option>
-          <option value='de'>German</option>
-          <option value='es'>Spanish</option>
-          <option value='fr'>French</option>
-          <option value='zh-cn'>Chinese (Simplified)</option>
-          <option value='zh-tw'>Chinese (Traditional)</option>
-        </select>
+
+        <div className='flex align-items-center'>
+          <MenuToggler />
+
+          <Navigation className='mr-l1'>
+            <NavigationLink exact to='/' className='mr-l3'>
+              {t('page_title.Home', 'Home')}
+            </NavigationLink>{' '}
+            <NavigationLink to='/portfolio'>
+              {t('page_title.Portfolio', 'Portfolio')}
+            </NavigationLink>
+            {/* <NavigationLink to='/sign-in'>
+              {t('page_title.Sign In', 'Sign In')}
+            </NavigationLink> */}
+          </Navigation>
+        </div>
       </div>
     </StyledHeader>
   );

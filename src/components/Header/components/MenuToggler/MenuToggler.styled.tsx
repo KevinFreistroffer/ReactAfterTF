@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import { Drawer as MatDrawer, Button } from '@material-ui/core';
+import styled from 'styled-components/macro';
+import { Drawer as MatDrawer, Icon as MatIcon } from '@material-ui/core';
 
-export const Container = styled(Button)`
+export const Container = styled.div`
   display: flex;
   width: auto;
 
@@ -10,10 +10,14 @@ export const Container = styled(Button)`
   }
 `;
 
+export const Icon = styled(MatIcon)`
+  font-size: 7vw;
+`;
+
 export const Drawer = styled(MatDrawer)`
   .MuiDrawer-paper {
     width: 242px;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
   }
 `;
 
@@ -25,5 +29,9 @@ export const UL = styled.ul`
 
 export const LI = styled.li`
   width: 100%;
-  padding: 0;
+  padding: 1rem 0;
+`;
+
+export const Label = styled.label`
+  font-size: 0.75rem;
 `;

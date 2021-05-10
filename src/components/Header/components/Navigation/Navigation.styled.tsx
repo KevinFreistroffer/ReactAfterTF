@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components/macro';
+import { NavLink } from 'react-router-dom';
 
 export const StyledNavigation = styled.nav`
   display: none;
@@ -9,7 +9,22 @@ export const StyledNavigation = styled.nav`
   }
 `;
 
-export const NavigationLink = styled(Link)`
+export const NavigationLink = styled(NavLink).attrs({
+  activeStyle: {
+    color: 'red',
+  },
+})`
   display: inline-block;
   width: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: black;
+
+  &:focus,
+  &:visited,
+  &:active,
+  &:link {
+    color: black;
+  }
 `;

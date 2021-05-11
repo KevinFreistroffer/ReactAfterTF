@@ -15,7 +15,6 @@ export interface IWorkHistory {
 export interface IDetailsProps extends IWorkHistory {}
 
 export const Details = (props: IDetailsProps) => {
-  console.log(props);
   const { t } = useTranslation();
   return (
     <Container

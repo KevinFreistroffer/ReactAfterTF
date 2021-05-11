@@ -65,7 +65,6 @@ export const SignIn = (props: ISignInProps) => {
   };
 
   const handleOnBlur = (event: any, index: number) => {
-    console.log('handleOnBlur', event.target.value);
     const inputId = event.target.id;
     validate(inputId, event.target.value);
   };
@@ -75,7 +74,6 @@ export const SignIn = (props: ISignInProps) => {
     let index = formControls.findIndex((f) => f.id === inputId);
     switch (inputId) {
       case 'username':
-        console.log('case username', value.trim() !== '');
         if (value.trim() !== '') {
           newState[index].error = undefined;
         } else {
@@ -114,7 +112,6 @@ export const SignIn = (props: ISignInProps) => {
         break;
     }
 
-    console.log('newState before calling updateFormControls', newState);
     updateFormControls([...newState]);
   };
 
@@ -128,14 +125,9 @@ export const SignIn = (props: ISignInProps) => {
     );
   });
 
-  React.useEffect(() => {
-    console.log('React useEffect formControls changed');
-    console.log(formControls);
-  }, [formControls]);
 
   const submit = (event: any) => {
     event.preventDefault();
-    console.log('Form submitted');
     setFormIsSubmitted(true);
   };
 

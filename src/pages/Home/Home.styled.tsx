@@ -46,13 +46,11 @@ export const ParagraphAndImg = styled.div<{ reverse?: boolean }>`
   max-width: 768px;
   margin: 0 auto;
   flex-direction: ${(props) => {
-    console.log(props);
     return props.reverse ? 'column-reverse' : 'column';
   }};
 
   @media only screen and (min-width: 768px) {
     flex-direction: ${(props) => {
-      console.log(props);
       return props.reverse ? 'row-reverse' : 'row';
     }};
   }

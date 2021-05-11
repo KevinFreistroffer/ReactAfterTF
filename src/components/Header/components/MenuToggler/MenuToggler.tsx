@@ -11,9 +11,7 @@ export const MenuToggler = (props: IMenuTogglerProps): JSX.Element => {
     // TODO typeof event?
     window.onresize = (event: any) => {
       if (window.innerWidth >= 768) {
-        console.log('window.innerWidth > 768');
         if (open) {
-          console.log('is open. calling setIsOpen(false)');
           setIsOpen(false);
         }
       }

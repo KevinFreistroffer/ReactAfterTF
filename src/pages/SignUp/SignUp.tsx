@@ -80,7 +80,6 @@ export const SignUp = (props: ISignUpProps) => {
 
   const submit = (event: any) => {
     event.preventDefault();
-    console.log('Form submitted');
   };
 
   return (

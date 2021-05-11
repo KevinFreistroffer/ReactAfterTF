@@ -3,7 +3,7 @@ const i18nLanguageDetector = {
 
   lookup() {
     // options -> are passed in options
-    return 'fr';
+    return 'en';
   },
   cacheUserLanguage(lng: string) {
     // options -> are passed in options

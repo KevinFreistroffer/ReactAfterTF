@@ -21,8 +21,12 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
   }, []);
 
   const handleOnChange = (event: any) => {
-    console.log(event.target.value);
     Cookie.set('LANG_CODE', event.target.value);
+    if (typeof (Storage !== undefined)) {
+      const localStorage = window.localStorage;
+
+      localStorage.setItem('LANG_CODE', event.target.value);
+    }
     setSelectedLanguage(event.target.value);
     window.location.reload();
   };

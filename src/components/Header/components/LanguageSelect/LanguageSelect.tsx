@@ -14,10 +14,14 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
 
   useEffect(() => {
-    const langCode = Cookie.get('LANG_CODE');
-    if (langCode) {
-      setSelectedLanguage(langCode);
-    }
+    try {
+      const langCode =
+        Cookie.get('LANG_CODE') || window.localStorage.getItem('LANG_CODE');
+
+      if (langCode) {
+        setSelectedLanguage(langCode.toLowerCase());
+      }
+    } catch (error) {}
   }, []);
 
   const handleOnChange = (event: any) => {

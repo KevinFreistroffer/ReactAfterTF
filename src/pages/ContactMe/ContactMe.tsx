@@ -18,12 +18,18 @@ export const ContactMe = (props: IErrorProps) => {
       <main>
         <ul>
           <li>
-            {t('page_content.contact_me.Email', 'Email')}:
-            kevin.freistroffer@gmail.com
+            {t('page_content.contact_me.Email', 'Email')}
+            :&nbsp;kevin.freistroffer@gmail.com
           </li>
           <li>
-            {t('page_content.contact_me.LinkedIn', 'LinkedIn')}:
-            https://www.linkedin.com/in/kevin-freistroffer-963600159/
+            {t('page_content.contact_me.LinkedIn', 'LinkedIn')}:&nbsp;
+            <a
+              href='https://www.linkedin.com/in/kevin-freistroffer-963600159/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              https://www.linkedin.com/in/kevin-freistroffer-963600159/
+            </a>
           </li>
         </ul>
       </main>

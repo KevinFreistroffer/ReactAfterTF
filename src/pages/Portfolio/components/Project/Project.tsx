@@ -16,15 +16,15 @@ export const Project = (props: IProject) => {
         <ul className='full-width'>
           <li className='project-name mb-l1'>{props.projectName}</li>
           <li className='technologies'>
-            <strong>Technologies:</strong>{' '}
+            <strong>{t('Technologies', 'Technologies')}:</strong>{' '}
             {returnCommaSeparatedStrings(props.technologies)}
           </li>
           <li className='description'>
-            <strong>About:</strong> {props.description}
+            <strong>{t('About', 'About')}:</strong> {props.description}
           </li>
         </ul>
         <div className='screenshots full-width justify-flex-start'>
-          <strong className='mb-l1'>Screenshots:</strong>
+          <strong className='mb-l1'>{t('Screenshots', 'Screenshots')}:</strong>
           <SimpleReactLightbox>
             <SRLWrapper className='flex'>
               {props.screenshots.length &&

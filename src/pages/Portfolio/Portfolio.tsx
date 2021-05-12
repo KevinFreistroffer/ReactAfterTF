@@ -6,7 +6,7 @@ import OrderHistory from '../../imgs/order_history.jpg';
 import OrderDetails from '../../imgs/order_details.jpg';
 import OrderDetails768 from '../../imgs/order_details_768.jpg';
 import OrderDetails576 from '../../imgs/order_details_576.png';
-import OrderDetails320 from '../../imgs/order_details_320.png';
+import OrderDetails320 from '../../imgs/order_details_320.jpg';
 import ReactGradients from '../../imgs/react-gradients.png';
 
 import Project from './components/Project';

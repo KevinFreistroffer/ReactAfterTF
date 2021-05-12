@@ -20,6 +20,7 @@
   "Technologies": "技术领域",
   "About": "关于",
   "Screenshots": "屏幕截图",
+  "Select language": "选择语言",
   "about_me_text": "嗨，我叫凯文·弗里斯特罗弗（Kevin Freistroffer）。我今年36岁，已经发展了10多年。我专门研究HTML5，CSS3，前端使用React和Angular的JavaScript，服务器端的NodeJS和MongoDB，Dart和Flutter的移动开发。我喜欢，更喜欢并需要与其他开发人员团队一起进步，并期待以敏捷的方法加入团队，利用Jira等工具开发故事和功能，并修复错误，同时学习新知识。技术，策略和思维过程，以发展并融入我的日常工作中，并由团队领导并在需要时领导",
   "work_history": {
     "summary": {

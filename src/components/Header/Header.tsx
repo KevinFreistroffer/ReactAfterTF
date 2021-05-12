@@ -6,6 +6,7 @@ import Navigation from './components/Navigation';
 import { NavigationLink } from './components/Navigation/Navigation.styled';
 import { useTranslation } from 'react-i18next';
 import LanguageSelect from '../Header/components/LanguageSelect';
+import { AppContext } from '../../context/';
 
 export interface DefaultRootState {
   key: string;
@@ -14,6 +15,7 @@ export interface DefaultRootState {
 export interface IHeaderProps {}
 
 const Header = (props: IHeaderProps) => {
+  const { toggleDrawer } = React.useContext(AppContext);
   const { t } = useTranslation();
   return (
     <StyledHeader>
@@ -23,7 +25,7 @@ const Header = (props: IHeaderProps) => {
       <LanguageSelect />
 
       <div className='flex align-items-center'>
-        <MenuToggler />
+        <MenuToggler onClick={toggleDrawer} />
 
         <Navigation>
           <NavigationLink exact to='/' className='mr-l3'>

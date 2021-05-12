@@ -17,8 +17,6 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
       const langCode =
         Cookie.get('LANG_CODE') || window.localStorage.getItem('LANG_CODE');
 
-      console.log(langCode);
-
       if (langCode) {
         setSelectedLanguage(langCode.toLowerCase());
       }

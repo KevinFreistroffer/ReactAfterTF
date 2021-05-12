@@ -32,7 +32,7 @@ export const Project = (props: IProject) => {
                   (s: { src: string; alt: string }, index: number) => {
                     const { src, alt, caption } = props.screenshots[index];
                     return (
-                      <ImageCaption className='image-caption'>
+                      <ImageCaption className='image-caption' key={index}>
                         <ImgContainer>
                           <img src={`${src}`} alt={alt} />
                         </ImgContainer>

@@ -20,6 +20,7 @@
   "Technologies": "Technologien",
   "About": "Über",
   "Screenshots": "Screenshots",
+  "Select language": "Sprache auswählen",
   "about_me_text": "Hallo, ich heiße Kevin Freistroffer. Ich bin 36 Jahre alt und entwickle mich seit über 10 Jahren. Ich bin spezialisiert auf HTML5, CSS3, JavaScript mit React und Angular im Frontend, NodeJS und MongoDB auf der Serverseite, Dart und Mobile Development mit Flutter. Ich genieße, bevorzuge und muss mit einem Team anderer Entwickler zusammenarbeiten, um Fortschritte zu erzielen, und freue mich darauf, einem Team in einer agilen Methodik beizutreten, Tools wie Jira zu verwenden, Geschichten und Funktionen zu entwickeln und Fehler zu beheben, während ich Neues lerne Technologien, Strategien, Denkprozesse, die sich entwickeln und in meine täglichen Routinen integrieren lassen, vom Team geleitet werden und bei Bedarf führen", 
   "work_history": {
     "summary": {

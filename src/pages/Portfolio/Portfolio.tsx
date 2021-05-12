@@ -136,8 +136,8 @@ export const Portfolio = (props: IPortfolioProps) => {
         <h1 className='mb-l3'>{t('page_title.Portfolio', 'Portfolio')}</h1>
       </PageHeader>
       <main>
-        {data.map((project: IProject) => (
-          <Project {...project}></Project>
+        {data.map((project: IProject, index: number) => (
+          <Project {...project} key={index}></Project>
         ))}
       </main>
     </Container>

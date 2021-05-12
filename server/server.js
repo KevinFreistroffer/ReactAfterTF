@@ -8,13 +8,20 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+app.set('port', process.env.PORT || 1337);
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, '../src/build')));
+app.use('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../src/build/index.html'))
+})
 app.use('/', indexRouter);
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -30,6 +37,10 @@ app.use(function (err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(app.get('port'), () => {
+  console.log(`Listening on port: ${app.get('port')}`);
 });
 
 module.exports = app;

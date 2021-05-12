@@ -18,14 +18,14 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
         Cookie.get('LANG_CODE') || window.localStorage.getItem('LANG_CODE');
 
       if (langCode) {
-        setSelectedLanguage(langCode.toLowerCase());
+        setSelectedLanguage(langCode);
       }
     } catch (error) {}
   }, []);
 
   const handleOnChange = (event: React.ChangeEvent<{ value: any }>) => {
-    console.log('handleOnChange', event.target.value);
-    const value = event.target.value.toLowerCase();
+    const value = event.target.value;
+
     Cookie.set('LANG_CODE', value);
     if (typeof (Storage !== undefined)) {
       const localStorage = window.localStorage;
@@ -49,10 +49,10 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
           <option value='de'>{t('German', 'German')}</option>
           <option value='es'>{t('Spanish', 'Spanish')}</option>
           <option value='fr'>{t('French', 'French')}</option>
-          <option value='zh-cn'>
+          <option value='zh-CN'>
             {t('Chinese (Simplified)', 'Chinese (Simplified)')}
           </option>
-          <option value='zh-tw'>
+          <option value='zh-TW'>
             {t('Chinese (Traditional)', 'Chinese (Traditional)')}
           </option>
         </select>

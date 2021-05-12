@@ -27,6 +27,7 @@ i18n
       order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
+      lowerCaseLng: true,
       caches: ['cookie', 'localStorage'],
       excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
     
@@ -35,7 +36,7 @@ i18n
       htmlTag: document.documentElement,
     
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
-      //cookieOptions: { path: '/', sameSite: 'strict' }
+      cookieOptions: { path: '/', sameSite: 'strict' }
     },
   });
 

@@ -11,8 +11,7 @@ export const StyledHeader = styled.header.attrs({
   padding: 2rem 1rem;
   background-color: white;
 
-  .MuiFormControl-root,
-  ${StyledLanguageSelect} {
+  label {
     display: none;
   }
 
@@ -22,9 +21,10 @@ export const StyledHeader = styled.header.attrs({
   @media only screen and (min-width: 768px) {
     flex-direction: column;
 
-    .MuiFormControl-root,
-    ${StyledLanguageSelect} {
-      display: inherit;
+    label {
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
     }
   }
 

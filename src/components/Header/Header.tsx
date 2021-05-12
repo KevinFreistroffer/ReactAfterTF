@@ -19,11 +19,12 @@ const Header = (props: IHeaderProps) => {
   const { t } = useTranslation();
   return (
     <StyledHeader>
+      <label htmlFor='select-language'>
+        Select language
+        <LanguageSelect />
+      </label>
+
       <Title />
-
-      {/* Only visible from 768px+ */}
-      <LanguageSelect />
-
       <div className='flex align-items-center'>
         <MenuToggler onClick={toggleDrawer} />
 

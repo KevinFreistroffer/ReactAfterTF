@@ -39,6 +39,10 @@ export const Paragraph = styled.p`
 
   @media only screen and (min-width: 768px) {
   }
+
+  span {
+    display: block;
+  }
 `;
 
 export const ParagraphAndImg = styled.div<{ reverse?: boolean }>`

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Select, Option } from '../../../../styled/Select.styled';
 import { Container } from './LanguageSelect.styled';
 import FormControl from '@material-ui/core/FormControl';
 import Cookie from 'js-cookie';
@@ -18,45 +17,46 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
       const langCode =
         Cookie.get('LANG_CODE') || window.localStorage.getItem('LANG_CODE');
 
+      console.log(langCode);
+
       if (langCode) {
         setSelectedLanguage(langCode.toLowerCase());
       }
     } catch (error) {}
   }, []);
 
-  const handleOnChange = (event: any) => {
-    Cookie.set('LANG_CODE', event.target.value);
+  const handleOnChange = (event: React.ChangeEvent<{ value: any }>) => {
+    const value = event.target.value.toLowerCase();
+    Cookie.set('LANG_CODE', value);
     if (typeof (Storage !== undefined)) {
       const localStorage = window.localStorage;
 
-      localStorage.setItem('LANG_CODE', event.target.value);
+      localStorage.setItem('LANG_CODE', value);
     }
-    setSelectedLanguage(event.target.value);
+    setSelectedLanguage(value);
     window.location.reload();
   };
 
   return (
     <Container className='full-width '>
       <FormControl className={props.className}>
-        <Select
+        <select
           name='select-language'
           id='language-select'
           onChange={handleOnChange}
           value={selectedLanguage}
-          defaultValue='en'
-          onSelect={handleOnChange}
         >
-          <Option value='en'>{t('English', 'English')}</Option>
-          <Option value='de'>{t('German', 'German')}</Option>
-          <Option value='es'>{t('Spanish', 'Spanish')}</Option>
-          <Option value='fr'>{t('French', 'French')}</Option>
-          <Option value='zh-cn'>
+          <option value='en'>{t('English', 'English')}</option>
+          <option value='de'>{t('German', 'German')}</option>
+          <option value='es'>{t('Spanish', 'Spanish')}</option>
+          <option value='fr'>{t('French', 'French')}</option>
+          <option value='zh-cn'>
             {t('Chinese (Simplified)', 'Chinese (Simplified)')}
-          </Option>
-          <Option value='zh-tw'>
+          </option>
+          <option value='zh-tw'>
             {t('Chinese (Traditional)', 'Chinese (Traditional)')}
-          </Option>
-        </Select>
+          </option>
+        </select>
       </FormControl>
     </Container>
   );

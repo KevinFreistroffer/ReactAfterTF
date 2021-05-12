@@ -117,7 +117,7 @@ export const Home = (props: IHomeProps) => {
       <ParagraphAndImg className='justify-space-around align-items-center'>
         <Img className='col-xs-12 col-sm-6' src={me} alt='Kevin Freistroffer' />
         <Paragraph className='col-xs-12 col-sm-6'>
-          <div className='display-3'>{t('About me', 'About me')}:</div>
+          <span className='display-3'>{t('About me', 'About me')}:</span>
           {t('about_me_text', paragraph1)}
         </Paragraph>
       </ParagraphAndImg>
@@ -130,8 +130,8 @@ export const Home = (props: IHomeProps) => {
       </div>
       <div className='work-history col-xs-12'>
         <div className='display-3'>{t('Work history', 'Work history')}:</div>
-        {workHistory.map((history) => (
-          <Details {...history} />
+        {workHistory.map((history, index: number) => (
+          <Details {...history} key={index} />
         ))}
       </div>
     </Container>

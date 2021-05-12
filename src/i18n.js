@@ -24,10 +24,9 @@ i18n
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
     detection: {
-      order: [ 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'htmlTag'],
+      order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
-      lookupSessionStorage: 'LANG_CODE',
       caches: ['cookie', 'localStorage'],
       excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
     
@@ -37,7 +36,7 @@ i18n
     
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
       cookieOptions: { path: '/', sameSite: 'strict' }
-    }
+    },
   });
 
 

@@ -22,18 +22,16 @@ export const Details = (props: IDetailsProps) => {
       className='flex-column center-all'
     >
       <UL>
-        <li className='contractor-and-employment-period'>
-          {props.contractor && (
-            <LI className='contractor flex justify-content-space-between'>
-              <div>
-                <strong>{t('Contractor', 'Contractor')}:</strong>
-                &nbsp;
-                <span>{props.contractor}</span>
-              </div>
-              <strong>{props.employmentPeriod}</strong>
-            </LI>
-          )}
-        </li>
+        {props.contractor && (
+          <LI className='contractor flex justify-content-space-between'>
+            <div>
+              <strong>{t('Contractor', 'Contractor')}:</strong>
+              &nbsp;
+              <span>{props.contractor}</span>
+            </div>
+            <strong>{props.employmentPeriod}</strong>
+          </LI>
+        )}
 
         <LI className='client'>
           <strong>{t('Client', 'Client')}</strong>:&nbsp;

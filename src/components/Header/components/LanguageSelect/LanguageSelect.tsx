@@ -24,6 +24,7 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
   }, []);
 
   const handleOnChange = (event: React.ChangeEvent<{ value: any }>) => {
+    console.log('handleOnChange', event.target.value);
     const value = event.target.value.toLowerCase();
     Cookie.set('LANG_CODE', value);
     if (typeof (Storage !== undefined)) {

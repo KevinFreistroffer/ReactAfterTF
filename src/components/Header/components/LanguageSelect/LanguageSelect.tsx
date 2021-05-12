@@ -20,7 +20,12 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
       if (langCode) {
         setSelectedLanguage(langCode);
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(
+        'An error occurred accessing cookies or localStorage: ',
+        error
+      );
+    }
   }, []);
 
   const handleOnChange = (event: React.ChangeEvent<{ value: any }>) => {

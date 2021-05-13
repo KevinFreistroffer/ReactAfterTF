@@ -22,7 +22,7 @@ i18n
   .use(initReactI18next)
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
-  .init({
+  .init({ 
     detection: {
       order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       lookupCookie: 'LANG_CODE',
@@ -38,6 +38,9 @@ i18n
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
       cookieOptions: { path: '/', sameSite: 'strict' }
     },
+    react: {
+      useSuspense: true
+    }
   });
 
 

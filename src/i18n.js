@@ -27,7 +27,7 @@ i18n
       order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
       lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
-      lowerCaseLng: true,
+      lowerCaseLng: false,
       caches: ['cookie', 'localStorage'],
       excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
     

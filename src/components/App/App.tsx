@@ -44,7 +44,6 @@ export default function App(props: IAppProps) {
   }, [isOpen]);
 
   const toggleDrawer = (_isOpen?: boolean) => {
-    console.log('toggleDrawer', _isOpen);
     setIsOpen(!isOpen);
   };
 

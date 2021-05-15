@@ -30,7 +30,7 @@ i18n
       lookupLocalStorage: 'LANG_CODE',
       lowerCaseLng: false,
       caches: ['cookie', 'localStorage'],
-      excludeCacheFor: ['cimode'], // languages to not persist (cookie, localStorage)
+      excludeCacheFor: [], // languages to not persist (cookie, localStorage)
     
     
       // optional htmlTag with lang attribute, the default is:

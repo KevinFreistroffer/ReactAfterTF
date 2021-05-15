@@ -54,10 +54,10 @@ export const LanguageSelect = (props: ILanguageSelectProps): JSX.Element => {
           <option value='de'>{t('German', 'German')}</option>
           <option value='es'>{t('Spanish', 'Spanish')}</option>
           <option value='fr'>{t('French', 'French')}</option>
-          <option value='zh-CN'>
+          <option value='zh_CN'>
             {t('Chinese (Simplified)', 'Chinese (Simplified)')}
           </option>
-          <option value='zh-TW'>
+          <option value='zh_TW'>
             {t('Chinese (Traditional)', 'Chinese (Traditional)')}
           </option>
         </select>

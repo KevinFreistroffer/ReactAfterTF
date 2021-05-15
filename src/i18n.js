@@ -27,14 +27,14 @@ i18n
     //load: "currentOnly",
     //allbackLng: 'en',
     //preload: ['en'],
-    supportedLngs: ['en', 'de', 'es', 'fr', 'zh', 'zh-CN', 'zh-TW'],
+    supportedLngs: ['en', 'de', 'es', 'fr', 'zh', 'zh_CN', 'zh_TW'],
     debug: true,
     detection: {
       order: [ 'localStorage', 'cookie'],
       lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
       lowerCaseLng: true,
-      whitelist: ['en', 'de', 'es', 'fr', 'zh-cn', 'zh-tw'],
+      whitelist: ['en', 'de', 'es', 'fr', 'zh_CN', 'zh_TW'],
       //caches: [ 'localStorage', 'cookie'],  
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
       //cookieOptions: { path: '/', sameSite: 'strict' }

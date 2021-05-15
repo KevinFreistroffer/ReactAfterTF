@@ -26,11 +26,11 @@ i18n
     load: "currentOnly",
     nsSeparator: '-',
     detection: {
-      order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
-      lookupCookie: 'LANG_CODE',
+      order: [ 'localStorage', 'navigator', 'htmlTag'],
+      // lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
       lowerCaseLng: false,
-      caches: ['cookie', 'localStorage'],
+      caches: ['localStorage'],
       excludeCacheFor: [], // languages to not persist (cookie, localStorage)
     
     
@@ -38,7 +38,7 @@ i18n
       htmlTag: document.documentElement,
     
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
-      cookieOptions: { path: '/', sameSite: 'strict' }
+      //cookieOptions: { path: '/', sameSite: 'strict' }
     },
     react: {
       useSuspense: true

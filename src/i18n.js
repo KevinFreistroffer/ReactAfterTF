@@ -4,6 +4,8 @@ import { initReactI18next } from 'react-i18next';
 import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import i18nLanguageDetector from './i18n.languageDetector';
+import Cookie from 'js-cookie';
+// import { getLangCode } from '../src/utility/getLangCode';
 
 const languageDetector = new LanguageDetector();
 languageDetector.addDetector(i18nLanguageDetector)
@@ -12,8 +14,6 @@ languageDetector.addDetector(i18nLanguageDetector)
 // for passing in lng and translations on init
 
 i18n
-  // load translation using http -> see /public/locales (i.e. https://github.com/i18next/react-i18next/tree/master/example/react/public/locales)
-  // learn more: https://github.com/i18next/i18next-http-backend
   .use(Backend)
   // detect user language
   // learn more: https://github.com/i18next/i18next-browser-languageDetector
@@ -22,24 +22,25 @@ i18n
   .use(initReactI18next)
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
-  .init({ 
-    load: "all",
+  .init({  
+    lng: window.localStorage.getItem('LANG_CODE') || Cookie.get('LANG_CODE'),
+    //load: "currentOnly",
+    //allbackLng: 'en',
+    //preload: ['en'],
+    supportedLngs: ['en', 'de', 'es', 'fr', 'zh', 'zh-CN', 'zh-TW'],
+    debug: true,
     detection: {
-      order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      order: [ 'localStorage', 'cookie'],
       lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
-      lowerCaseLng: false,
-      caches: ['cookie', 'localStorage'],
-      excludeCacheFor: [], // languages to not persist (cookie, localStorage)
-    
-    
-      // optional htmlTag with lang attribute, the default is:
-      htmlTag: document.documentElement,
-    
+      lowerCaseLng: true,
+      whitelist: ['en', 'de', 'es', 'fr', 'zh-cn', 'zh-tw'],
+      //caches: [ 'localStorage', 'cookie'],  
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
-      cookieOptions: { path: '/', sameSite: 'strict' }
+      //cookieOptions: { path: '/', sameSite: 'strict' }
     },
     react: {
+      //wait: true,
       useSuspense: true
     }
   });

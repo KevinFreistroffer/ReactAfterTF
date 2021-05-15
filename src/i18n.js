@@ -23,14 +23,13 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({ 
-    load: "currentOnly",
-    nsSeparator: '-',
+    load: "all",
     detection: {
-      order: [ 'localStorage', 'navigator', 'htmlTag'],
-      // lookupCookie: 'LANG_CODE',
+      order: [ 'cookie', 'localStorage', 'navigator', 'htmlTag'],
+      lookupCookie: 'LANG_CODE',
       lookupLocalStorage: 'LANG_CODE',
       lowerCaseLng: false,
-      caches: ['localStorage'],
+      caches: ['cookie', 'localStorage'],
       excludeCacheFor: [], // languages to not persist (cookie, localStorage)
     
     
@@ -38,7 +37,7 @@ i18n
       htmlTag: document.documentElement,
     
       // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
-      //cookieOptions: { path: '/', sameSite: 'strict' }
+      cookieOptions: { path: '/', sameSite: 'strict' }
     },
     react: {
       useSuspense: true

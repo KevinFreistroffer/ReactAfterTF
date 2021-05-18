@@ -52,7 +52,7 @@ export const LI = styled.li`
 
   @media only screen and (min-width: 576px) {
     strong {
-      display: in
+      display: inline-block;
     }
   }
 

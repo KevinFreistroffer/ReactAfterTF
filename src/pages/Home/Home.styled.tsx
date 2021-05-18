@@ -1,3 +1,4 @@
+import { Card } from '@material-ui/core';
 import styled, { css } from 'styled-components/macro';
 
 export const SkillSets = css`
@@ -22,14 +23,21 @@ export const Container = styled.div`
   }
 `;
 
+export const StyledCard = styled(Card)`
+  margin-bottom: 1rem;
+`;
+
 export const Img = styled.img`
   display: block;
-  width: auto;
-  max-width: 320px;
-  margin: 0 auto 2rem;
-  border-radius: 5.18rem;
+  width: 100%;
+  max-width: 240px;
+  padding: 0;
+  
+  border-radius: 0;
 
   @media only screen and (min-width: 768px) {
+    // margin: 0 auto 2rem;
+    // border-radius: 5.18rem;
   }
 `;
 export const Paragraph = styled.p`
@@ -53,7 +61,7 @@ export const ParagraphAndImg = styled.div<{ reverse?: boolean }>`
     return props.reverse ? 'column-reverse' : 'column';
   }};
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 576px) {
     flex-direction: ${(props) => {
       return props.reverse ? 'row-reverse' : 'row';
     }};

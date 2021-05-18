@@ -15,14 +15,12 @@ export const ContactMe = (props: IErrorProps) => {
       <PageHeader>
         <h1>Contact Me</h1>
       </PageHeader>
-      <main>
-        <ul>
+     <ul>
           <li>
-            {t('page_content.contact_me.Email', 'Email')}
-            :&nbsp;kevin.freistroffer@gmail.com
+            <strong>{t('page_content.contact_me.Email', 'Email')}:</strong>{' '}kevin.freistroffer@gmail.com
           </li>
           <li>
-            {t('page_content.contact_me.LinkedIn', 'LinkedIn')}:&nbsp;
+            <strong>{t('page_content.contact_me.LinkedIn', 'LinkedIn')}:</strong>{' '}
             <a
               href='https://www.linkedin.com/in/kevin-freistroffer-963600159/'
               target='_blank'
@@ -32,7 +30,6 @@ export const ContactMe = (props: IErrorProps) => {
             </a>
           </li>
         </ul>
-      </main>
     </Container>
   );
 };

@@ -9,7 +9,7 @@ export const Container = styled.div`
     margin-bottom: 1rem;
     font-size: 2rem;
     text-align: left;
-    font-family: 'Big Shoulders Inline Text', cursive;
+    //font-family: 'Big Shoulders Inline Text', cursive;
 
     span {
       font-size: 1rem;

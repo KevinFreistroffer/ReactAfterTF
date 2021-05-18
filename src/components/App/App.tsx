@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import '../../styles/reset.css';
-import '../../styles/default.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Home, Portfolio, SignIn, SignUp, ContactMe } from '../../pages';
 import Header from '../Header/Header';

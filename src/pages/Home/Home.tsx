@@ -1,11 +1,12 @@
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import PageHeader from '../../components/PageHeader';
-import { Container, Img, Paragraph, ParagraphAndImg } from './Home.styled';
+import { Container, Img, Paragraph, ParagraphAndImg, StyledCard } from './Home.styled';
 import me from '../../imgs/me.jpg';
 import { paragraph1 } from './content';
 import Details from './components/Details';
 import IWorkHistory from './components/Details';
+import { Card } from '@material-ui/core';
 
 export interface IHomeProps {}
 
@@ -115,7 +116,7 @@ export const Home = (props: IHomeProps) => {
   return (
     <Container className='flex-column center-all'>
       <ParagraphAndImg className='justify-space-around align-items-center'>
-        <Img className='col-xs-12 col-sm-6' src={me} alt='Kevin Freistroffer' />
+        <StyledCard><Img className='col-xs-12 col-sm-6' src={me} alt='Kevin Freistroffer' /></StyledCard>
         <Paragraph className='col-xs-12 col-sm-6'>
           <span className='display-3'>{t('About me', 'About me')}:</span>
           {t('about_me_text', paragraph1)}

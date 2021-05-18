@@ -14,6 +14,7 @@ export interface IWorkHistory {
 
 export interface IDetailsProps extends IWorkHistory {}
 
+
 export const Details = (props: IDetailsProps) => {
   const { t } = useTranslation();
   return (
@@ -26,27 +27,31 @@ export const Details = (props: IDetailsProps) => {
           <LI className='contractor flex justify-content-space-between'>
             <div>
               <strong>{t('Contractor', 'Contractor')}:</strong>
-              &nbsp;
+              {' '}
               <span>{props.contractor}</span>
             </div>
             <strong>{props.employmentPeriod}</strong>
           </LI>
         )}
 
+        <LI className="employment-period">
+          <strong>Employment period:</strong>{' '}{props.employmentPeriod}
+        </LI>
+
         <LI className='client'>
-          <strong>{t('Client', 'Client')}</strong>:&nbsp;
+          <strong>{t('Client', 'Client')}:</strong>{' '}
           <span>{props.client}</span>
         </LI>
         <LI className='location'>
-          <strong>{t('Location', 'Location')}</strong>: &nbsp;
+          <strong>{t('Location', 'Location')}:</strong>{' '}
           <span>{props.location}</span>
         </LI>
         <LI>
-          <strong>{t('Position', 'Position')}</strong>:&nbsp;
+          <strong>{t('Position', 'Position')}:</strong>{' '}
           <span>{props.position}</span>
         </LI>
         <LI className='summary'>
-          <strong>{t('Summary', 'Summary')}</strong>:
+          <strong>{t('Summary', 'Summary')}:</strong>
           <UL className='summary-ul'>
             {props.summary.map((s, index) => (
               <LI key={index}>{s}</LI>

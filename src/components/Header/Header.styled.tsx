@@ -8,7 +8,7 @@ export const StyledHeader = styled.header.attrs({
   justify-content: space-between;
   align-items: center;
   position: relative;
-  padding: 2rem 1rem;
+  padding: 1rem;
   background-color: white;
 
   label {
@@ -16,9 +16,11 @@ export const StyledHeader = styled.header.attrs({
   }
 
   @media only screen and (min-width: 576px) {
+    padding: 1rem 2rem;
   }
 
   @media only screen and (min-width: 768px) {
+    // padding: 2rem 1rem;
     flex-direction: column;
 
     label {
